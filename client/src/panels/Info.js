@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Panel, PanelHeader, HeaderButton, platform, IOS, View, Div, Group} from '@vkontakte/vkui';
+import {Panel, PanelHeader, HeaderButton, platform, IOS, Div, Group} from '@vkontakte/vkui';
 import './Persik.css';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
-import connect from "@vkontakte/vkui-connect";
-import Home from "./Home";
 
 
 const osname = platform();

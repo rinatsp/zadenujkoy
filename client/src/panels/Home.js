@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ListItem, Button, Group, Div, Avatar, PanelHeader } from '@vkontakte/vkui';
+import { Panel, ListItem, Group, Avatar, PanelHeader } from '@vkontakte/vkui';
+import {Map} from "./Map";
 
 const Home = props => (
-	<Panel id={props.id}>
+	<Panel id={props.id} style={{ width: '100%', height: '100%'}}>
 		<PanelHeader>Example</PanelHeader>
 		{props.fetchedUser &&
 		<Group title="User Data Fetched with VK Connect">
@@ -14,14 +15,15 @@ const Home = props => (
 				{`${props.fetchedUser.first_name} ${props.fetchedUser.last_name}`}
 			</ListItem>
 		</Group>}
+		<Map />
 
-		<Group title="Navigation Example">
+		{/*<Group title="Navigation Example">
 			<Div>
 				<Button size="xl" level="2" onClick={props.go} data-to="persik">
 					Show me the Persik, please
 				</Button>
 			</Div>
-		</Group>
+		</Group>*/}
 	</Panel>
 );
 
