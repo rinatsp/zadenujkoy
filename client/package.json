@@ -29,7 +29,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
-    "react-mapbox-gl": "^4.0.0"
+    "react-mapbox-gl": "^4.0.0",
     "react-redux": "^5.1.0",
     "react-router-redux": "latest",
     "redux": "^4.0.1"
