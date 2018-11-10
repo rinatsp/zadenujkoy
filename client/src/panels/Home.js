@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ListItem, Group, Avatar, PanelHeader } from '@vkontakte/vkui';
+import { Panel, ListItem, Group, Avatar, PanelHeader, Div, Button } from '@vkontakte/vkui';
 import {Map} from "./Map";
 
 const Home = props => (
@@ -15,15 +15,18 @@ const Home = props => (
 				{`${props.fetchedUser.first_name} ${props.fetchedUser.last_name}`}
 			</ListItem>
 		</Group>}
+
+        <Group title="Navigation Example">
+            <Div>
+                <Button size="xl" level="2" onClick={props.go} data-to="info">
+                    Show me BANK INFO
+                </Button>
+            </Div>
+        </Group>
+
 		<Map />
 
-		{/*<Group title="Navigation Example">
-			<Div>
-				<Button size="xl" level="2" onClick={props.go} data-to="persik">
-					Show me the Persik, please
-				</Button>
-			</Div>
-		</Group>*/}
+
 	</Panel>
 );
 
