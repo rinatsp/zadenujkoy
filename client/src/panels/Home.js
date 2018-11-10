@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, ListItem, Group, Avatar, PanelHeader } from '@vkontakte/vkui';
+import {Panel, ListItem, Group, Avatar, PanelHeader, Button, Tabs, TabsItem, FixedLayout} from '@vkontakte/vkui';
 import {Map} from "./Map";
+
 
 const Home = props => (
 	<Panel id={props.id} style={{ width: '100%', height: '100%'}}>
-		<PanelHeader>Example</PanelHeader>
+		<PanelHeader>КэшЛокатор</PanelHeader>
+
 		{props.fetchedUser &&
 		<Group title="User Data Fetched with VK Connect">
 			<ListItem
@@ -14,17 +16,27 @@ const Home = props => (
 			>
 				{`${props.fetchedUser.first_name} ${props.fetchedUser.last_name}`}
 			</ListItem>
-		</Group>}
+		</Group>
+		}
 
 		<Map />
 
-		{/*<Group title="Navigation Example">
-			<Div>
-				<Button size="xl" level="2" onClick={props.go} data-to="persik">
-					Show me the Persik, please
-				</Button>
-			</Div>
-		</Group>*/}
+        <FixedLayout vertical="bottom" id={props.id}>
+            <Tabs>
+                <TabsItem>
+                    <Button size="xl" level="2" onClick={props.go} data-to="filter" >
+                        FILTERS
+                    </Button>
+                </TabsItem>
+                <TabsItem>
+                    <Button size="xl" level="2" onClick={props.go} data-to="aboutpanel">
+                        ABOUT
+                    </Button>
+                </TabsItem>
+            </Tabs>
+        </FixedLayout>
+
+
 	</Panel>
 );
 
@@ -40,5 +52,8 @@ Home.propTypes = {
 		}),
 	}),
 };
+
+
+
 
 export default Home;
