@@ -5,6 +5,9 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import Info from './panels/Info';
+import {AboutPanel} from "./panels/AboutPanel";
+import {Filters} from "./panels/Filters";
+
 
 class App extends React.Component {
 	constructor(props) {
@@ -37,7 +40,10 @@ class App extends React.Component {
 		return (
 			<View activePanel={this.state.activePanel}>
 				<Home id="home" fetchedUser={this.state.fetchedUser} go={this.go} />
-				<Info id="info" go={this.go} />
+				<Info id="info" fetchedUser={this.state.fetchedUser} go={this.go} />
+                <AboutPanel id="aboutpanel" fetchedUser={this.state.fetchedUser} go={this.go} />
+                <Filters id="filter" go={this.go} />
+
 			</View>
 		);
 	}

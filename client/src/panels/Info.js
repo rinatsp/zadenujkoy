@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Panel, PanelHeader, HeaderButton, platform, IOS, Div, Group} from '@vkontakte/vkui';
-import './Persik.css';
+import {Panel, PanelHeader, HeaderButton, platform, IOS, Div, Group, InfoRow} from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 
 
 const osname = platform();
-
 
 const Info = props => (
 	<Panel id={props.id}>
@@ -19,22 +17,28 @@ const Info = props => (
             Информация о банке
         </PanelHeader>
 
-        <Group title='Название'>
+        <Group>
             <Div>
+                <InfoRow title='Название'>
                 name
                 {/*				{this.props.name}*/}
-            </Div>
+                </InfoRow>
+                </Div>
         </Group>
-        <Group title='Адрес'>
+        <Group>
             <Div>
+                <InfoRow title='Адрес'>
                 address
                 {/*                {this.props.address}*/}
+                </InfoRow>
             </Div>
         </Group>
-        <Group title='Расстояние'>
+        <Group>
             <Div>
+                <InfoRow title='Расстояние'>
                 distance
                 {/*                {this.props.distance}*/}
+                </InfoRow>
             </Div>
         </Group>
 
@@ -42,8 +46,6 @@ const Info = props => (
 );
 
 Info.propTypes = {
-	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
 
 /*
 	name: PropTypes.string.isRequired,
