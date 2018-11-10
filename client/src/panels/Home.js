@@ -15,6 +15,7 @@ const Home = props => (
 				{`${props.fetchedUser.first_name} ${props.fetchedUser.last_name}`}
 			</ListItem>
 		</Group>}
+
 		<Map />
 
 		{/*<Group title="Navigation Example">
